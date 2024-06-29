@@ -1,0 +1,1004 @@
+{
+    "context": {
+        "domain": "ONDC:RET14",
+        "action": "on_status",
+        "core_version": "1.2.0",
+        "bap_id": "pramaan.ondc.org/alpha/mock-server",
+        "bap_uri": "https://pramaan.ondc.org/alpha/mock-server/buyer",
+        "bpp_id": "api.greenreceipt.in",
+        "bpp_uri": "https://api.greenreceipt.in/ondc",
+        "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+        "message_id": "a3154e62-d614-444e-972a-b7f59a777387",
+        "city": "std:0124",
+        "country": "IND",
+        "timestamp": "2024-06-29T10:49:40.327Z",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "order": {
+            "id": "9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf",
+            "state": "Accepted",
+            "provider": {
+                "id": "24932",
+                "locations": [
+                    {
+                        "id": "24932"
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": "24932_2740437",
+                    "fulfillment_id": "24932_F1",
+                    "quantity": {
+                        "count": 2
+                    }
+                }
+            ],
+            "billing": {
+                "name": "Mayur",
+                "address": {
+                    "name": "Mayur",
+                    "building": "Siri Fort Institutional",
+                    "locality": "Siri Fort Institutional Area, Siri Fort",
+                    "city": "New Delhi",
+                    "state": "Delhi",
+                    "country": "India",
+                    "area_code": "110049"
+                },
+                "email": "sharique.efgh@gmail.com",
+                "phone": "9886098860",
+                "created_at": "2024-06-29T10:48:19.26Z",
+                "updated_at": "2024-06-29T10:48:19.26Z"
+            },
+            "fulfillments": [
+                {
+                    "id": "24932_F1",
+                    "@ondc/org/provider_name": "Ajay Electronics",
+                    "type": "Delivery",
+                    "tracking": false,
+                    "@ondc/org/TAT": "PT4H",
+                    "state": {
+                        "descriptor": {
+                            "code": "Pending"
+                        }
+                    },
+                    "start": {
+                        "location": {
+                            "descriptor": {
+                                "name": "Ajay Electronics"
+                            },
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "locality": "Nirvana Country",
+                                "city": "Gurgaon",
+                                "state": "Haryana",
+                                "area_code": "122018"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T10:58:30.442Z",
+                                "end": "2024-06-29T11:58:30.442Z"
+                            }
+                        },
+                        "contact": {
+                            "phone": "8076362934",
+                            "email": "Demo3@gmail.com"
+                        }
+                    },
+                    "end": {
+                        "location": {
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "name": "Mayur",
+                                "building": "Siri Fort Institutional",
+                                "locality": "Siri Fort Institutional Area, Siri Fort",
+                                "city": "New Delhi",
+                                "state": "Delhi",
+                                "country": "India",
+                                "area_code": "110049"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T13:58:30.442Z",
+                                "end": "2024-06-29T14:58:30.442Z"
+                            }
+                        },
+                        "person": {
+                            "name": "Mayur"
+                        },
+                        "contact": {
+                            "phone": "9886098860",
+                            "email": "sharique.efgh@gmail.com"
+                        }
+                    }
+                }
+            ],
+            "quote": {
+                "price": {
+                    "currency": "INR",
+                    "value": "165980.00"
+                },
+                "breakup": [
+                    {
+                        "@ondc/org/item_id": "24932_2740437",
+                        "@ondc/org/item_quantity": {
+                            "count": 2
+                        },
+                        "title": "IPHONE 14 256GB STARLIGHT",
+                        "@ondc/org/title_type": "item",
+                        "price": {
+                            "currency": "INR",
+                            "value": "165980.00"
+                        },
+                        "item": {
+                            "price": {
+                                "currency": "INR",
+                                "value": "82990.00"
+                            }
+                        }
+                    },
+                    {
+                        "@ondc/org/item_id": "24932_F1",
+                        "title": "Delivery charges",
+                        "@ondc/org/title_type": "delivery",
+                        "price": {
+                            "currency": "INR",
+                            "value": "0.00"
+                        }
+                    }
+                ],
+                "ttl": "PT4H"
+            },
+            "payment": {
+                "uri": "https://ondc.transaction.com/payment",
+                "tl_method": "http/get",
+                "params": {
+                    "currency": "INR",
+                    "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+                    "amount": "165980.00"
+                },
+                "status": "PAID",
+                "type": "ON-ORDER",
+                "collected_by": "BAP",
+                "@ondc/org/buyer_app_finder_fee_type": "percent",
+                "@ondc/org/buyer_app_finder_fee_amount": "3.0",
+                "@ondc/org/settlement_details": [
+                    {
+                        "settlement_counterparty": "seller-app",
+                        "settlement_phase": "sale-amount",
+                        "beneficiary_name": "Buynxt Private Limited",
+                        "settlement_type": "neft",
+                        "upi_address": "buynxt@okidfc",
+                        "settlement_bank_account_no": "10129914936",
+                        "settlement_ifsc_code": "IDFB0021001",
+                        "bank_name": "IDFC First Bank Limited",
+                        "branch_name": "Golf Course Road, Gurgaon"
+                    }
+                ]
+            },
+            "created_at": "2024-06-29T10:48:30.128Z",
+            "updated_at": "2024-06-29T10:49:40.327Z"
+        }
+    }
+}
+
+
+{
+    "context": {
+        "domain": "ONDC:RET14",
+        "action": "on_status",
+        "core_version": "1.2.0",
+        "bap_id": "pramaan.ondc.org/alpha/mock-server",
+        "bap_uri": "https://pramaan.ondc.org/alpha/mock-server/buyer",
+        "bpp_id": "api.greenreceipt.in",
+        "bpp_uri": "https://api.greenreceipt.in/ondc",
+        "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+        "message_id": "79a60a31-ea7f-4a9b-aa21-05aa0f0cb607",
+        "city": "std:0124",
+        "country": "IND",
+        "timestamp": "2024-06-29T10:49:45.646Z",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "order": {
+            "id": "9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf",
+            "state": "In-progress",
+            "provider": {
+                "id": "24932",
+                "locations": [
+                    {
+                        "id": "24932"
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": "24932_2740437",
+                    "fulfillment_id": "24932_F1",
+                    "quantity": {
+                        "count": 2
+                    }
+                }
+            ],
+            "billing": {
+                "name": "Mayur",
+                "address": {
+                    "name": "Mayur",
+                    "building": "Siri Fort Institutional",
+                    "locality": "Siri Fort Institutional Area, Siri Fort",
+                    "city": "New Delhi",
+                    "state": "Delhi",
+                    "country": "India",
+                    "area_code": "110049"
+                },
+                "email": "sharique.efgh@gmail.com",
+                "phone": "9886098860",
+                "created_at": "2024-06-29T10:48:19.26Z",
+                "updated_at": "2024-06-29T10:48:19.26Z"
+            },
+            "fulfillments": [
+                {
+                    "id": "24932_F1",
+                    "@ondc/org/provider_name": "Ajay Electronics",
+                    "type": "Delivery",
+                    "tracking": false,
+                    "@ondc/org/TAT": "PT4H",
+                    "state": {
+                        "descriptor": {
+                            "code": "Packed"
+                        }
+                    },
+                    "start": {
+                        "location": {
+                            "descriptor": {
+                                "name": "Ajay Electronics"
+                            },
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "locality": "Nirvana Country",
+                                "city": "Gurgaon",
+                                "state": "Haryana",
+                                "area_code": "122018"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T10:58:30.442Z",
+                                "end": "2024-06-29T11:58:30.442Z"
+                            }
+                        },
+                        "contact": {
+                            "phone": "8076362934",
+                            "email": "Demo3@gmail.com"
+                        }
+                    },
+                    "end": {
+                        "location": {
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "name": "Mayur",
+                                "building": "Siri Fort Institutional",
+                                "locality": "Siri Fort Institutional Area, Siri Fort",
+                                "city": "New Delhi",
+                                "state": "Delhi",
+                                "country": "India",
+                                "area_code": "110049"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T13:58:30.442Z",
+                                "end": "2024-06-29T14:58:30.442Z"
+                            }
+                        },
+                        "person": {
+                            "name": "Mayur"
+                        },
+                        "contact": {
+                            "phone": "9886098860",
+                            "email": "sharique.efgh@gmail.com"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "code": "routing",
+                            "list": [
+                                {
+                                    "code": "type",
+                                    "value": "P2P"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "quote": {
+                "price": {
+                    "currency": "INR",
+                    "value": "165980.00"
+                },
+                "breakup": [
+                    {
+                        "@ondc/org/item_id": "24932_2740437",
+                        "@ondc/org/item_quantity": {
+                            "count": 2
+                        },
+                        "title": "IPHONE 14 256GB STARLIGHT",
+                        "@ondc/org/title_type": "item",
+                        "price": {
+                            "currency": "INR",
+                            "value": "165980.00"
+                        },
+                        "item": {
+                            "price": {
+                                "currency": "INR",
+                                "value": "82990.00"
+                            }
+                        }
+                    },
+                    {
+                        "@ondc/org/item_id": "24932_F1",
+                        "title": "Delivery charges",
+                        "@ondc/org/title_type": "delivery",
+                        "price": {
+                            "currency": "INR",
+                            "value": "0.00"
+                        }
+                    }
+                ],
+                "ttl": "PT4H"
+            },
+            "payment": {
+                "uri": "https://ondc.transaction.com/payment",
+                "tl_method": "http/get",
+                "params": {
+                    "currency": "INR",
+                    "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+                    "amount": "165980.00"
+                },
+                "status": "PAID",
+                "type": "ON-ORDER",
+                "collected_by": "BAP",
+                "@ondc/org/buyer_app_finder_fee_type": "percent",
+                "@ondc/org/buyer_app_finder_fee_amount": "3.0",
+                "@ondc/org/settlement_details": [
+                    {
+                        "settlement_counterparty": "seller-app",
+                        "settlement_phase": "sale-amount",
+                        "beneficiary_name": "Buynxt Private Limited",
+                        "settlement_type": "neft",
+                        "upi_address": "buynxt@okidfc",
+                        "settlement_bank_account_no": "10129914936",
+                        "settlement_ifsc_code": "IDFB0021001",
+                        "bank_name": "IDFC First Bank Limited",
+                        "branch_name": "Golf Course Road, Gurgaon"
+                    }
+                ]
+            },
+            "created_at": "2024-06-29T10:48:30.128Z",
+            "updated_at": "2024-06-29T10:49:45.646Z"
+        }
+    }
+}
+
+
+{
+    "context": {
+        "domain": "ONDC:RET14",
+        "action": "on_status",
+        "core_version": "1.2.0",
+        "bap_id": "pramaan.ondc.org/alpha/mock-server",
+        "bap_uri": "https://pramaan.ondc.org/alpha/mock-server/buyer",
+        "bpp_id": "api.greenreceipt.in",
+        "bpp_uri": "https://api.greenreceipt.in/ondc",
+        "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+        "message_id": "6d645af3-1fb7-4457-9785-d76b07ba665b",
+        "city": "std:0124",
+        "country": "IND",
+        "timestamp": "2024-06-29T10:49:48.696Z",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "order": {
+            "id": "9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf",
+            "state": "In-progress",
+            "provider": {
+                "id": "24932",
+                "locations": [
+                    {
+                        "id": "24932"
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": "24932_2740437",
+                    "fulfillment_id": "24932_F1",
+                    "quantity": {
+                        "count": 2
+                    }
+                }
+            ],
+            "billing": {
+                "name": "Mayur",
+                "address": {
+                    "name": "Mayur",
+                    "building": "Siri Fort Institutional",
+                    "locality": "Siri Fort Institutional Area, Siri Fort",
+                    "city": "New Delhi",
+                    "state": "Delhi",
+                    "country": "India",
+                    "area_code": "110049"
+                },
+                "email": "sharique.efgh@gmail.com",
+                "phone": "9886098860",
+                "created_at": "2024-06-29T10:48:19.26Z",
+                "updated_at": "2024-06-29T10:48:19.26Z"
+            },
+            "fulfillments": [
+                {
+                    "id": "24932_F1",
+                    "@ondc/org/provider_name": "Ajay Electronics",
+                    "type": "Delivery",
+                    "tracking": false,
+                    "@ondc/org/TAT": "PT4H",
+                    "state": {
+                        "descriptor": {
+                            "code": "Order-picked-up"
+                        }
+                    },
+                    "start": {
+                        "location": {
+                            "descriptor": {
+                                "name": "Ajay Electronics"
+                            },
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "locality": "Nirvana Country",
+                                "city": "Gurgaon",
+                                "state": "Haryana",
+                                "area_code": "122018"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T10:58:30.442Z",
+                                "end": "2024-06-29T11:58:30.442Z"
+                            },
+                            "timestamp": "2024-06-29T10:49:45.570Z"
+                        },
+                        "contact": {
+                            "phone": "8076362934",
+                            "email": "Demo3@gmail.com"
+                        }
+                    },
+                    "end": {
+                        "location": {
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "name": "Mayur",
+                                "building": "Siri Fort Institutional",
+                                "locality": "Siri Fort Institutional Area, Siri Fort",
+                                "city": "New Delhi",
+                                "state": "Delhi",
+                                "country": "India",
+                                "area_code": "110049"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T13:58:30.442Z",
+                                "end": "2024-06-29T14:58:30.442Z"
+                            }
+                        },
+                        "person": {
+                            "name": "Mayur"
+                        },
+                        "contact": {
+                            "phone": "9886098860",
+                            "email": "sharique.efgh@gmail.com"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "code": "routing",
+                            "list": [
+                                {
+                                    "code": "type",
+                                    "value": "P2P"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "quote": {
+                "price": {
+                    "currency": "INR",
+                    "value": "165980.00"
+                },
+                "breakup": [
+                    {
+                        "@ondc/org/item_id": "24932_2740437",
+                        "@ondc/org/item_quantity": {
+                            "count": 2
+                        },
+                        "title": "IPHONE 14 256GB STARLIGHT",
+                        "@ondc/org/title_type": "item",
+                        "price": {
+                            "currency": "INR",
+                            "value": "165980.00"
+                        },
+                        "item": {
+                            "price": {
+                                "currency": "INR",
+                                "value": "82990.00"
+                            }
+                        }
+                    },
+                    {
+                        "@ondc/org/item_id": "24932_F1",
+                        "title": "Delivery charges",
+                        "@ondc/org/title_type": "delivery",
+                        "price": {
+                            "currency": "INR",
+                            "value": "0.00"
+                        }
+                    }
+                ],
+                "ttl": "PT4H"
+            },
+            "payment": {
+                "uri": "https://ondc.transaction.com/payment",
+                "tl_method": "http/get",
+                "params": {
+                    "currency": "INR",
+                    "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+                    "amount": "165980.00"
+                },
+                "status": "PAID",
+                "type": "ON-ORDER",
+                "collected_by": "BAP",
+                "@ondc/org/buyer_app_finder_fee_type": "percent",
+                "@ondc/org/buyer_app_finder_fee_amount": "3.0",
+                "@ondc/org/settlement_details": [
+                    {
+                        "settlement_counterparty": "seller-app",
+                        "settlement_phase": "sale-amount",
+                        "beneficiary_name": "Buynxt Private Limited",
+                        "settlement_type": "neft",
+                        "upi_address": "buynxt@okidfc",
+                        "settlement_bank_account_no": "10129914936",
+                        "settlement_ifsc_code": "IDFB0021001",
+                        "bank_name": "IDFC First Bank Limited",
+                        "branch_name": "Golf Course Road, Gurgaon"
+                    }
+                ]
+            },
+            "documents": [
+                {
+                    "url": "https://greenreceipt.in/invoices/9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf.pdf",
+                    "label": "Invoice"
+                }
+            ],
+            "created_at": "2024-06-29T10:48:30.128Z",
+            "updated_at": "2024-06-29T10:49:48.696Z"
+        }
+    }
+}
+
+
+{
+    "context": {
+        "domain": "ONDC:RET14",
+        "action": "on_status",
+        "core_version": "1.2.0",
+        "bap_id": "pramaan.ondc.org/alpha/mock-server",
+        "bap_uri": "https://pramaan.ondc.org/alpha/mock-server/buyer",
+        "bpp_id": "api.greenreceipt.in",
+        "bpp_uri": "https://api.greenreceipt.in/ondc",
+        "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+        "message_id": "60cc15ca-b7fb-4a04-9882-b79177dbda97",
+        "city": "std:0124",
+        "country": "IND",
+        "timestamp": "2024-06-29T10:50:35.480Z",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "order": {
+            "id": "9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf",
+            "state": "In-progress",
+            "provider": {
+                "id": "24932",
+                "locations": [
+                    {
+                        "id": "24932"
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": "24932_2740437",
+                    "fulfillment_id": "24932_F1",
+                    "quantity": {
+                        "count": 2
+                    }
+                }
+            ],
+            "billing": {
+                "name": "Mayur",
+                "address": {
+                    "name": "Mayur",
+                    "building": "Siri Fort Institutional",
+                    "locality": "Siri Fort Institutional Area, Siri Fort",
+                    "city": "New Delhi",
+                    "state": "Delhi",
+                    "country": "India",
+                    "area_code": "110049"
+                },
+                "email": "sharique.efgh@gmail.com",
+                "phone": "9886098860",
+                "created_at": "2024-06-29T10:48:19.26Z",
+                "updated_at": "2024-06-29T10:48:19.26Z"
+            },
+            "fulfillments": [
+                {
+                    "id": "24932_F1",
+                    "@ondc/org/provider_name": "Ajay Electronics",
+                    "type": "Delivery",
+                    "tracking": false,
+                    "@ondc/org/TAT": "PT4H",
+                    "state": {
+                        "descriptor": {
+                            "code": "Out-for-delivery"
+                        }
+                    },
+                    "start": {
+                        "location": {
+                            "descriptor": {
+                                "name": "Ajay Electronics"
+                            },
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "locality": "Nirvana Country",
+                                "city": "Gurgaon",
+                                "state": "Haryana",
+                                "area_code": "122018"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T10:58:30.442Z",
+                                "end": "2024-06-29T11:58:30.442Z"
+                            },
+                            "timestamp": "2024-06-29T10:49:45.570Z"
+                        },
+                        "contact": {
+                            "phone": "8076362934",
+                            "email": "Demo3@gmail.com"
+                        }
+                    },
+                    "end": {
+                        "location": {
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "name": "Mayur",
+                                "building": "Siri Fort Institutional",
+                                "locality": "Siri Fort Institutional Area, Siri Fort",
+                                "city": "New Delhi",
+                                "state": "Delhi",
+                                "country": "India",
+                                "area_code": "110049"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T13:58:30.442Z",
+                                "end": "2024-06-29T14:58:30.442Z"
+                            }
+                        },
+                        "person": {
+                            "name": "Mayur"
+                        },
+                        "contact": {
+                            "phone": "9886098860",
+                            "email": "sharique.efgh@gmail.com"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "code": "routing",
+                            "list": [
+                                {
+                                    "code": "type",
+                                    "value": "P2P"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "quote": {
+                "price": {
+                    "currency": "INR",
+                    "value": "165980.00"
+                },
+                "breakup": [
+                    {
+                        "@ondc/org/item_id": "24932_2740437",
+                        "@ondc/org/item_quantity": {
+                            "count": 2
+                        },
+                        "title": "IPHONE 14 256GB STARLIGHT",
+                        "@ondc/org/title_type": "item",
+                        "price": {
+                            "currency": "INR",
+                            "value": "165980.00"
+                        },
+                        "item": {
+                            "price": {
+                                "currency": "INR",
+                                "value": "82990.00"
+                            }
+                        }
+                    },
+                    {
+                        "@ondc/org/item_id": "24932_F1",
+                        "title": "Delivery charges",
+                        "@ondc/org/title_type": "delivery",
+                        "price": {
+                            "currency": "INR",
+                            "value": "0.00"
+                        }
+                    }
+                ],
+                "ttl": "PT4H"
+            },
+            "payment": {
+                "uri": "https://ondc.transaction.com/payment",
+                "tl_method": "http/get",
+                "params": {
+                    "currency": "INR",
+                    "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+                    "amount": "165980.00"
+                },
+                "status": "PAID",
+                "type": "ON-ORDER",
+                "collected_by": "BAP",
+                "@ondc/org/buyer_app_finder_fee_type": "percent",
+                "@ondc/org/buyer_app_finder_fee_amount": "3.0",
+                "@ondc/org/settlement_details": [
+                    {
+                        "settlement_counterparty": "seller-app",
+                        "settlement_phase": "sale-amount",
+                        "beneficiary_name": "Buynxt Private Limited",
+                        "settlement_type": "neft",
+                        "upi_address": "buynxt@okidfc",
+                        "settlement_bank_account_no": "10129914936",
+                        "settlement_ifsc_code": "IDFB0021001",
+                        "bank_name": "IDFC First Bank Limited",
+                        "branch_name": "Golf Course Road, Gurgaon"
+                    }
+                ]
+            },
+            "documents": [
+                {
+                    "url": "https://greenreceipt.in/invoices/9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf.pdf",
+                    "label": "Invoice"
+                }
+            ],
+            "created_at": "2024-06-29T10:48:30.128Z",
+            "updated_at": "2024-06-29T10:50:35.480Z"
+        }
+    }
+}
+
+
+{
+    "context": {
+        "domain": "ONDC:RET14",
+        "action": "on_status",
+        "core_version": "1.2.0",
+        "bap_id": "pramaan.ondc.org/alpha/mock-server",
+        "bap_uri": "https://pramaan.ondc.org/alpha/mock-server/buyer",
+        "bpp_id": "api.greenreceipt.in",
+        "bpp_uri": "https://api.greenreceipt.in/ondc",
+        "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+        "message_id": "edd7ad12-fdde-4302-b763-c3b43af1617f",
+        "city": "std:0124",
+        "country": "IND",
+        "timestamp": "2024-06-29T10:51:37.298Z",
+        "ttl": "PT30S"
+    },
+    "message": {
+        "order": {
+            "id": "9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf",
+            "state": "Completed",
+            "provider": {
+                "id": "24932",
+                "locations": [
+                    {
+                        "id": "24932"
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": "24932_2740437",
+                    "fulfillment_id": "24932_F1",
+                    "quantity": {
+                        "count": 2
+                    }
+                }
+            ],
+            "billing": {
+                "name": "Mayur",
+                "address": {
+                    "name": "Mayur",
+                    "building": "Siri Fort Institutional",
+                    "locality": "Siri Fort Institutional Area, Siri Fort",
+                    "city": "New Delhi",
+                    "state": "Delhi",
+                    "country": "India",
+                    "area_code": "110049"
+                },
+                "email": "sharique.efgh@gmail.com",
+                "phone": "9886098860",
+                "created_at": "2024-06-29T10:48:19.26Z",
+                "updated_at": "2024-06-29T10:48:19.26Z"
+            },
+            "fulfillments": [
+                {
+                    "id": "24932_F1",
+                    "@ondc/org/provider_name": "Ajay Electronics",
+                    "type": "Delivery",
+                    "tracking": false,
+                    "@ondc/org/TAT": "PT4H",
+                    "state": {
+                        "descriptor": {
+                            "code": "Order-delivered"
+                        }
+                    },
+                    "start": {
+                        "location": {
+                            "descriptor": {
+                                "name": "Ajay Electronics"
+                            },
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "locality": "Nirvana Country",
+                                "city": "Gurgaon",
+                                "state": "Haryana",
+                                "area_code": "122018"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T10:58:30.442Z",
+                                "end": "2024-06-29T11:58:30.442Z"
+                            },
+                            "timestamp": "2024-06-29T10:49:45.570Z"
+                        },
+                        "contact": {
+                            "phone": "8076362934",
+                            "email": "Demo3@gmail.com"
+                        }
+                    },
+                    "end": {
+                        "location": {
+                            "gps": "28.41430316,77.06620157",
+                            "address": {
+                                "name": "Mayur",
+                                "building": "Siri Fort Institutional",
+                                "locality": "Siri Fort Institutional Area, Siri Fort",
+                                "city": "New Delhi",
+                                "state": "Delhi",
+                                "country": "India",
+                                "area_code": "110049"
+                            }
+                        },
+                        "time": {
+                            "range": {
+                                "start": "2024-06-29T13:58:30.442Z",
+                                "end": "2024-06-29T14:58:30.442Z"
+                            },
+                            "timestamp": "2024-06-29T10:51:37.227Z"
+                        },
+                        "person": {
+                            "name": "Mayur"
+                        },
+                        "contact": {
+                            "phone": "9886098860",
+                            "email": "sharique.efgh@gmail.com"
+                        }
+                    },
+                    "tags": [
+                        {
+                            "code": "routing",
+                            "list": [
+                                {
+                                    "code": "type",
+                                    "value": "P2P"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "quote": {
+                "price": {
+                    "currency": "INR",
+                    "value": "165980.00"
+                },
+                "breakup": [
+                    {
+                        "@ondc/org/item_id": "24932_2740437",
+                        "@ondc/org/item_quantity": {
+                            "count": 2
+                        },
+                        "title": "IPHONE 14 256GB STARLIGHT",
+                        "@ondc/org/title_type": "item",
+                        "price": {
+                            "currency": "INR",
+                            "value": "165980.00"
+                        },
+                        "item": {
+                            "price": {
+                                "currency": "INR",
+                                "value": "82990.00"
+                            }
+                        }
+                    },
+                    {
+                        "@ondc/org/item_id": "24932_F1",
+                        "title": "Delivery charges",
+                        "@ondc/org/title_type": "delivery",
+                        "price": {
+                            "currency": "INR",
+                            "value": "0.00"
+                        }
+                    }
+                ],
+                "ttl": "PT4H"
+            },
+            "payment": {
+                "uri": "https://ondc.transaction.com/payment",
+                "tl_method": "http/get",
+                "params": {
+                    "currency": "INR",
+                    "transaction_id": "44f9c7a6-4f12-40b9-ba77-fb90ee9cff6f",
+                    "amount": "165980.00"
+                },
+                "status": "PAID",
+                "type": "ON-ORDER",
+                "collected_by": "BAP",
+                "@ondc/org/buyer_app_finder_fee_type": "percent",
+                "@ondc/org/buyer_app_finder_fee_amount": "3.0",
+                "@ondc/org/settlement_details": [
+                    {
+                        "settlement_counterparty": "seller-app",
+                        "settlement_phase": "sale-amount",
+                        "beneficiary_name": "Buynxt Private Limited",
+                        "settlement_type": "neft",
+                        "upi_address": "buynxt@okidfc",
+                        "settlement_bank_account_no": "10129914936",
+                        "settlement_ifsc_code": "IDFB0021001",
+                        "bank_name": "IDFC First Bank Limited",
+                        "branch_name": "Golf Course Road, Gurgaon"
+                    }
+                ]
+            },
+            "documents": [
+                {
+                    "url": "https://greenreceipt.in/invoices/9k3dry1F20eAiFdQuLxGDMg6vYdIJMcf.pdf",
+                    "label": "Invoice"
+                }
+            ],
+            "created_at": "2024-06-29T10:48:30.128Z",
+            "updated_at": "2024-06-29T10:51:37.298Z"
+        }
+    }
+}
